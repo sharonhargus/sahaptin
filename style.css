@@ -1,0 +1,198 @@
+body {
+font-family: serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 1em;
+font-size: .875em;
+word-spacing: normal;
+letter-spacing: normal;
+text-decoration: none;
+text-transform: none;
+background-color: #fff;
+color: #000;
+}
+
+img {
+border: 0;
+display: inline;
+position:relative;
+top:3px;
+
+}
+
+* html img {
+border: 0;
+display: block;
+position:relative;
+top:3px;
+
+}
+
+
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------DIVS-------------- */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
+
+div.chap_1 {
+text-indent: 0;
+text-align: center;
+width: 100%;
+}
+
+
+/* ------------- 1 -------------- */
+
+
+div.head_1 {
+text-indent: -2.571em; 	
+margin-left:2.571em;
+}
+
+
+div.xr_1 {
+text-indent: -2.571em; 	
+margin-left:2.571em;
+font-size:0.75em
+}
+
+div.xr_2 {
+text-indent:-2.571em;
+margin-left:4.142em;
+font-size:0.75em
+}
+/* ------------- 2 -------------- */
+
+
+div.head_2 {
+text-indent:-2.571em;
+margin-left:4.142em;	
+}
+
+
+div.head_2 span {
+font-size:1em;
+}
+
+
+/* ------------- 3 -------------- */
+
+
+div.head_3 {
+text-indent:-2.571em;
+margin-left:5.713em;	
+}
+
+
+
+/* ------------- 4 -------------- */
+
+
+div.head_4 {
+text-indent:-2.571em;
+margin-left:7.284em;		
+}
+
+/* ------------- 5 -------------- */
+
+
+div.head_5 {
+text-indent:-2.571em;
+margin-left:8.855em;		
+}
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------SPANS------------- */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
+span.audio {
+width: 20px;
+border: 0;
+}
+
+div.chap {
+font-family: serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 2.25em;
+line-height: 1em;
+word-spacing: normal;
+letter-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: center;
+}
+
+span.shlang {
+font-weight: bold; /*color: #0000CC;*/
+}
+span.latlang{font-style: italic;}
+span.spanlang{font-style: italic;}
+span.frelang{font-style: italic;}
+span.cjlang{font-style: italic;}
+span.nplang{font-style: italic;}
+span.psahlang{font-style: normal; }
+span.sallang{font-style: italic;}
+
+span.tag{font-variant: small-caps}
+span.notSmCap{font-variant: normal; font-weight: bold; font-size:1.13em;}
+/* ------------- 1 -------------- */
+
+
+span.head_1 {
+font-size:1.13em;
+line-height: 1em;
+text-align: left;
+}
+
+	
+
+/* ------------- 2 -------------- */
+
+
+span.head_2 {
+font-size:1em;
+line-height: 1em;
+text-align: left;
+}
+
+
+/* ------------- 3 -------------- */
+
+	
+span.head_3 {
+font-size:1em;
+line-height: 1em;
+text-align: left;
+}
+
+
+/* ------------- 4 -------------- */
+
+	
+span.head_4 {
+font-size:1em;
+line-height: 1em;
+text-align: left;
+}
+
+
+/* ------------- 5 -------------- */
+
+	
+span.head_5 {
+font-size:1em;
+line-height: 1em;
+text-align: left;
+}
