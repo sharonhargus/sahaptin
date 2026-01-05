@@ -1,0 +1,1879 @@
+html { 
+height: 100%;
+margin-bottom: 1px;
+margin-top:0px;
+overflow-y: scroll;
+}
+
+body { 
+background-color: #eeeeee;
+color: #222222;
+position: relative; 
+margin: 0;
+padding: 0;
+height: 100%;
+font-size:100%;
+line-height:1.125em;
+background: url(http://depts.washington.edu/llc/Images/Main_Background.gif) scroll repeat;
+}
+
+/* --- IE Body ----*/
+* html body { 
+background-color: #eeeeee;
+color: #222222;
+position:relative; 
+margin: 0px;
+min-height: 100%;
+font-size:100%;
+line-height:1.125em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- */
+/* ---------- About Popups ----------- */
+/* ---------------------------------- */
+
+
+
+
+#hideshow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+#fade {
+	background: #000; 
+	position: fixed; 
+	width: 100%;
+	height: 100%;
+	filter:alpha(opacity=80);
+	opacity: .80;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /*--IE 8 Transparency--*/
+	left: 0;
+	z-index: 10;
+}
+.popup_block {
+	background: #ddd;
+	padding: 10px 20px;
+	border: 10px solid #fff;
+	float: left;
+	width: 600px;
+	position: fixed;
+	top: 10%;
+	left: 45%;
+	margin: 0 0 0 -250px;
+	z-index: 100;
+
+}
+.popup_block .popup {
+	float: left;
+	width: 100%;
+	background: #fff;
+	margin: 10px 0;
+	padding: 10px 0;
+	border: 1px solid #bbb;
+}
+.popup h3 {
+	margin: 0 0 20px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #bbb;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+.popup p {
+	padding: 5px 10px;
+	margin: 5px 0;
+}
+.popup img.cntrl {
+	position: absolute;
+	right: -20px;
+	top: -20px;
+	border: 0;
+}
+
+/*--Making IE6 Understand Fixed Positioning--*/
+
+*html #fade {
+	position: absolute;
+	top:expression(eval(document.compatMode &&
+	document.compatMode=='CSS1Compat') ?
+	documentElement.scrollTop : document.body.scrollTop);
+}
+
+*html .popup_block {
+	position: absolute;
+	top:expression(eval(document.compatMode &&
+	document.compatMode=='CSS1Compat') ?
+	documentElement.scrollTop
+	+((documentElement.clientHeight-this.clientHeight)/2)
+	: document.body.scrollTop
+	+((document.body.clientHeight-this.clientHeight)/2));
+	
+	left:expression(eval(document.compatMode &&
+	document.compatMode=='CSS1Compat') ?
+	documentElement.scrollLeft 
+	+ (document.body.clientWidth /2 ) 
+	: document.body.scrollLeft 
+	+ (document.body.offsetWidth /2 ));
+}
+
+
+
+/* ---------------------------------- */
+/* ---------- Header Divs ----------- */
+/* ---------------------------------- */
+
+div#PageWrap
+{
+width: 100%;
+min-height: 100%;
+margin: 0 auto; 
+text-align: center;
+    z-index: 5;
+}
+
+div#HeaderBackground
+{
+width:972px;
+height:50px;
+margin: 0 auto;
+text-align: center;
+padding: 0px;
+background-color: #a46f3d;
+background: url(http://depts.washington.edu/llc/Images/Header.gif) scroll no-repeat;
+}
+
+div#HeaderUWLink
+{
+width: 200px;
+height: 18px;
+margin: 0px;
+padding: 0px;
+display: block;
+position: relative;
+left:15px;
+top:2px;
+float: left;
+		
+}
+
+div#HeaderLogoLink
+{
+width: 439px;
+height: 28px;
+margin: 0px;
+padding: 0px;
+display: block;
+position: relative;
+left: 80px;
+top:11px;
+float: left;
+		
+}
+
+
+
+div#MainMenuWrap
+{
+width: 972px;
+height: 30px;
+margin: 0 auto;
+padding: 0px;
+border-bottom: 3px solid #fff;
+background-color: #000000;
+z-index:10;
+}
+
+* html div#MainMenuWrap
+{
+width: 972px;
+height: 32px;
+margin: 0 auto;
+padding: 0px;
+border-bottom: 3px solid #fff;
+background-color: #000000;
+z-index:10;
+}
+
+
+div#MainMenuLanguages
+{
+width:220px;
+height:22px;
+border-width: 0px;
+padding: 0px;
+margin-left: 10px;
+border-style: solid;
+text-align: center;
+display: inline;
+position: relative;
+left: 0px;
+top: 5px;
+background-color:transparent;
+float: left;
+z-index:11;	
+}
+
+* html div#MainMenuLanguages
+{
+width:220px;
+height:22px;
+border-width: 0px;
+padding: 0px;
+margin-left: 10px;
+border-style: solid;
+text-align: left;
+display: inline;
+position: relative;
+left: 0px;
+top: 4px;
+background-color:transparent;
+float: left;	
+}
+
+div#MainMenuSearchBoxWrap
+{
+padding: 0px;
+margin-right: 10px;
+width: 190px;
+height: 20px;
+text-align: right;
+position: relative;
+top: 4px;
+left: 0px;
+font-size:1px;
+line-height:0;	
+float: right;	
+}
+
+div#MainMenuSearchBox
+{
+padding: 0px;
+margin: 0 auto;
+position: relative; 
+top: 0px; 
+left: 0px; 
+width:120px; 
+height: 20px; 
+float: right; 
+font-size:1px; 
+line-height:0;
+}
+
+div#MainMenuSearchBoxSubmit
+{
+padding: 0px;
+margin: 0 auto;
+position: relative;
+top: 1px;
+left: 0px; 
+width:64px; 
+height: 20px; 
+float: left; 
+font-size:1px; 
+line-height:0;
+}
+
+
+div#CenterPageWrap
+{
+width:973px; 
+margin: 0 auto; 
+padding: 0px 0px 0px 0px; 
+text-align: center;
+background-color:#fff;
+border-color: #999999;
+border-style: solid;
+border-width: 0px;
+border-bottom-width: 15px;
+text-decoration: none;
+overflow: hidden;
+
+}
+
+
+* html div#CenterPageWrap
+{
+width:972px; 
+height:auto !important;
+height:100%;
+min-height: 550px;
+margin: 0 auto; 
+padding: 0px 0px 0px 0px; 
+text-align: center;
+background-color:#fff;
+border-color: #999999;
+border-style: solid;
+border-width: 0px;
+border-bottom-width: 15px;
+}
+
+.underlinedheader {
+color: #39275b;
+font-family: arial, helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+margin: 36px 12px 0px 0px;
+background: url(http://depts.washington.edu/llc/Images/OLR_Type_Header_Bar.gif) scroll repeat-x;
+height: 26px;
+width: 684px;
+padding: 6px 6px 6px 36px;
+position: relative;
+letter-spacing: 4px;
+top: 0px;
+left: -36px;
+}
+
+
+/* ---------------------------------- */
+/* ---------- Main Menu Bar --------- */
+/* ---------------------------------- */
+
+#headermenucontainer ul
+{
+background-color: #000000;
+color: White;
+font-family: arial, helvetica, sans-serif;
+font-weight: normal;
+padding: 0px;
+margin: 0px 0px 0px 0px;
+height: 21px;
+line-height: 12px;
+position: relative;
+left: 0px;
+top: 8px; 
+float: left;
+}
+
+#headermenucontainer ul li { display: inline; }
+
+#headermenucontainer ul li a
+{
+padding: 0.1em 1em;
+background-color: #000000;
+color: White;
+font-weight: normal;
+text-decoration: none;
+float: left;
+line-height: 11px;
+border-right: 1px solid #fff;
+}
+
+
+#headermenucontainer ul li a:hover
+{
+background-color: #000;
+color: #fff;
+}
+
+
+/* ------------------------------------------- */
+/* ---------- Other Horizontal Menus --------- */
+/* ------------------------------------------- */
+
+#horizontalmenucontainer ul
+{
+background-color: #fff;
+color: 5674a5;
+font-family: arial, helvetica, sans-serif;
+font-weight: normal;
+padding: 0px;
+margin: 0px 0px 0px 0px;
+height: 21px;
+line-height: 12px;
+position: relative;
+left: 0px;
+top: 0px; 
+float: left;
+}
+
+#horizontalmenucontainer ul li { display: inline; }
+
+#horizontalmenucontainer ul li a
+{
+padding: 0.1em 1em;
+background-color: #fff;
+color: 5674a5;
+font-weight: normal;
+text-decoration: none;
+margin: 0px 0px 4px 0px;
+float: left;
+line-height: 12px;
+border-right: 1px solid #888;
+}
+
+
+#horizontalmenucontainer ul li a:hover
+{
+background-color: #fff;
+color: #5674a5;
+}
+
+
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+
+/* 
+Title: Vertical CSS menu with a behavior file.
+Author: Stefan Vervoort
+Blog: http://www.divitodesign.com/blog/ 
+Article: http://www.divitodesign.com/blog/2008/01/vertical-css-menu-with-a-behavior-file/
+*/
+
+
+ 
+p a {
+	color: #000;
+	text-decoration: none!important;
+
+}
+
+p a:hover{	text-decoration: none!important;
+}
+
+ul#nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height:1.125em;
+	z-index: 500;
+	width:150px;
+
+}
+
+
+ul#nav li a {
+	display: block;
+	font-weight: bold;
+	padding: 0px 10px;
+	background:#eee;
+
+}
+
+ul#nav li a:hover{
+	background:#888;
+	color:#fff;
+
+	}
+	
+ul#nav li {
+	position: relative;
+	width: 150px;
+	text-align: left;
+	margin-right:5px;
+	border:1px solid #ccc;
+
+}
+
+ul#nav li.current a{
+	background:#ddd;
+	}
+
+ul#nav li.current a:hover{
+	background:#888;
+	}
+
+
+	
+li ul {
+	line-height:1.125em;
+	display: none;
+	position: absolute;
+	width:150px;
+	font-weight: normal;
+	padding: 0px 0 10px 0;
+	margin-left:-1px;
+	}
+	
+
+
+ul#nav li ul.sub li{
+	border-width:0 1px 1px 1px!important;
+}
+
+ul#nav li ul.sub li a{
+	font-weight: normal!important;
+	font-size: 0.90em;
+	text-align: left;
+}
+li>ul {
+	top: auto;
+	left: auto;
+	list-style: none;
+}
+
+li:hover ul, li.over ul {
+	display: block;
+}
+
+li.column2reset
+{
+list-style: none; margin-top: -25.4em; margin-left: 12.60em; background: transparent; 
+}
+
+* html li.column2reset
+{
+list-style: none; margin-top: -26.75em; margin-left: 12.4em; background: transparent; 
+}
+
+li.column3reset
+{
+list-style: none; margin-top: -25.4em; margin-left: 25.2em; background: transparent; 	
+}
+
+* html li.column3reset
+{
+list-style: none; margin-top: -26.75em; margin-left: 24.8em; background: transparent;
+}
+
+  li.column1 { margin-left: 0em; list-style: none;}
+  li.column2 { margin-left: 12.60em; list-style: none;}
+* html li.column2 { margin-left: 12.4em; list-style: none;}
+  li.column3 { margin-left: 25.2em; list-style: none;}
+* html li.column3 { margin-left: 24.8em; list-style: none;}
+
+
+
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*--------------------------------------
+----------- MAIN CONTENT CSS ----------
+--------------------------------------*/
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+
+
+#container
+{
+margin:0 auto;
+padding:0; 
+position:relative;
+overflow:auto;
+height:auto !important;
+height: 100%;
+min-height: 425px;
+}
+
+#leftcontainer
+{
+overflow: visible;
+padding: 0px;
+margin: 0px 0px 0px 10px;
+width:175px;	
+float:left;
+min-height: 100px;
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 100%;
+letter-spacing: 0px;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-indent: 0ex;
+}
+
+
+
+.box_cover {
+float:left;
+border-width: 0px 1px 0px 0px;
+border-color: #fff;
+border-style: solid;
+}
+
+
+
+
+.box_publisher {
+background-color:#2a6e8f;
+float: left; 
+width:172px; 
+height: 530px; 
+border-width: 0px 1px 0px 0px; 
+border-color: #fff; 
+border-style: solid;		
+}
+
+.box_enter {
+background: url(Images/Background_Left.gif) scroll repeat-y;
+background-color:#a46f3d;
+float: left;
+right: 530px;
+width: 428px;
+height: 530px;		
+}
+
+* html .box_enter {
+background: url(Images/Background_Left.gif) scroll repeat-y;
+float: left;
+right: 530px;
+width: 390px;
+height: 530px;		
+}
+
+.box_normal_blue {
+background-color:#2a6e8f;
+width: 573px;
+height: 530px;
+border-width: 0px 1px 0px 0px; 
+border-color: #fff; 
+border-style: solid;		
+}
+
+* html .box_normal_blue {
+background-color:#2a6e8f;
+width: 570px;
+height: 530px;
+border-width: 0px 1px 0px 0px; 
+border-color: #fff; 
+border-style: solid;		
+}
+
+
+.box_normal_brown {
+background: url(Images/Background_Left.gif) scroll repeat-y; 
+height: 530px;
+width: 399px;
+float: right;
+}
+
+* html .box_normal_brown {
+background: url(Images/Background_Left.gif) scroll repeat-y; 
+height: 530px;
+width: 398px;
+float: right;
+}
+
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/*--------------------------------------
+------ Fonts and Formatting CSS --------
+--------------------------------------*/
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+
+
+
+
+
+/*---------------------------------
+---- START FONTS & TEXT FORMAT ----
+---------------------------------*/
+
+.clear {clear:both}
+
+
+div.centered 
+{
+margin: 0 auto; 
+text-align: center;
+}
+
+div.centered table 
+{
+margin: 0 auto; 
+text-align: center;
+}
+
+
+div.vertical_middle { 
+position: relative; 
+top:0px; 
+margin-top:0em;
+}
+
+
+div.spacerblank
+{
+line-height: 20px;
+}
+
+div.spacerblue
+{
+line-height: 10px;
+color: #2a3953;
+background-color: #2a3953;
+}
+
+div.spacerbluesmall
+{
+line-height: 4px;
+color: #2a3953;
+background-color: #2a3953;
+}
+
+
+
+.normal {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+letter-spacing: 0px;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;
+}
+
+
+
+
+EM.normalblue {
+color: #2a6e8f;
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+letter-spacing: 0px;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;
+}
+
+.left {
+text-align: left;
+}
+
+.small {
+font-family: arial, helvetica, sans-serif;
+font-size: 11px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;
+}
+
+EM.smallblue {
+color: #2a6e8f;
+font-family: arial, helvetica, sans-serif;
+font-size:  0.625em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.15ex;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;
+}
+
+span.smallwhite {
+color: #dddddd;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.625em;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;
+}
+
+div.breadcrumbs {
+color: #2a6e8f;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.625em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+line-height: 100%;
+letter-spacing: 0.10ex;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+margin-bottom: 0px; 
+margin-left: 24px; 
+margin-right: 24px; 
+margin-top: 12px; 
+text-indent: 0ex;
+z-index:-1;
+}
+
+div.insetfull {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 36px; 
+margin-top: 8px;
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 560px;
+word-spacing: normal;
+z-index:0;
+}
+
+* html div.insetfull {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 26px; 
+margin-right: 8px; 
+margin-top: 8px; 
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 400px;
+word-spacing: normal;
+z-index:0;
+}
+
+
+div.rightbox {
+background-color: #a46f3d;
+color: #ffffff;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 20px; 
+margin-left: 24px; 
+margin-right: 24px; 
+margin-top: 12px;
+min-height: 100%;
+padding: 12px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 410px;
+word-spacing: normal;
+z-index:1;
+float: right;
+}
+
+div.insetwide {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 84px; 
+margin-top: 24px;
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 690px;
+word-spacing: normal;
+z-index:1;
+}
+
+* html div.insetwide {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 24px; 
+margin-top: 12px; 
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 690px;
+word-spacing: normal;
+z-index:1;
+}
+
+
+div.inset {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 84px; 
+margin-top: 24px;
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 612px;
+word-spacing: normal;
+z-index:1;
+}
+
+* html div.inset {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 24px; 
+margin-top: 12px; 
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 612px;
+word-spacing: normal;
+z-index:1;
+}
+
+
+div.insethelp {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 24px; 
+margin-top: 24px;
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 418px;
+word-spacing: normal;
+z-index:1;
+}
+
+* html div.insethelp {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 0.75em;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+letter-spacing: 0.0em;
+line-height:1.5em;
+margin-bottom: 12px; 
+margin-left: 36px; 
+margin-right: 24px; 
+margin-top: 12px; 
+min-height: 100%;
+padding: 0px;
+position: relative; top: 0px; 
+text-align: left;
+text-decoration: none;
+text-indent: 0ex;
+text-transform: none;
+width: 448px;
+word-spacing: normal;
+z-index:1;
+}
+
+H1 {
+color: #fff;
+font-family: arial, helvetica, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+margin: 4px 0px 5px 0px;
+text-align: left;
+}
+
+H2 {
+color: #39275b;
+font-family: arial, helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+margin: 36px 12px 0px 0px;
+background: url(http://depts.washington.edu/llc/Images/OLR_Type_Header_Bar.gif) scroll repeat-x;
+height: 26px;
+width: 684px;
+padding: 6px 6px 6px 36px;
+position: relative;
+letter-spacing: 4px;
+top: 0px;
+left: -36px;
+}
+
+div.chap {
+font-family: serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 1.5em;
+line-height: 1.7em;
+word-spacing: normal;
+letter-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: center;
+margin: 10px 0px 0px 0px;
+color: #fff;
+background-color: #333;
+border-width: 2px 0px 0px 0px;
+border-style: solid;
+border-color: #fff;
+text-align: center;
+}
+
+div.chaptop {
+	font-family: serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-size: 1.5em;
+line-height: 1.7em;
+word-spacing: normal;
+letter-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: center;
+margin: 0px 0px 0px 0px;
+color: #fff;
+border-width: 0px 0px 0px 0px;
+border-style: solid;
+border-color: #fff;
+text-align: center;
+background-color: #333;
+}
+
+.correctionword {
+font-family: serif;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 1.5em;
+font-size: 1.15em;
+word-spacing: normal;
+letter-spacing: normal;
+text-decoration: none;
+text-transform: none;
+background-color: transparent;
+color: #fff;
+border-width: 1px 0px 0px 0px;
+border-style: solid;
+border-color: #bbb;
+text-align: left;
+padding: 0px 15px 0px 15px;
+}
+
+.uheader {
+color: #fff;
+font-family: times, helvetica, sans-serif;
+font-size: 16px;
+line-height: 1.5em;
+font-style: normal;
+font-weight: bold;
+margin: 10px 0px 5px 0px;
+padding: 0px 0px 5px 0px;
+border-width: 0px 0px 1px 0px;
+border-style: solid;
+border-color: #fff;
+text-align: center:
+}
+
+.header {
+color: #a46f3d;
+font-family: times, helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+margin: 5px 0px 5px 0px;
+}
+
+
+
+.subheader {
+color: #a46f3d;
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: bold;
+margin: 5px 0px 5px 0px;
+padding: 0px;
+}
+
+.subheadertall {
+color: #a46f3d;
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: bold;
+margin: 12px 0px 6px 0px;
+padding: 0px;
+}
+
+
+div.olrlevelheader {
+background-color: #ccc;
+color: #a46f3d;
+width: 700px;
+font-family: arial, helvetica, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: bold;
+padding: 6px 6px 6px 12px;
+margin: 0px 0px 5px 0px;
+float: left;
+position: relative;
+top: 0px;
+left: -24px;
+}
+
+
+.helpimagefloat {
+border: 1px solid #222;
+margin: 0px 0px 12px 12px;
+float: right;	
+}
+
+.helpimage {
+border: 1px solid #222;
+margin: 0px 0px 12px 12px;
+float: none;	
+}
+
+div.helpheader {
+color: #fff;
+width: 380px;
+font-family: arial, helvetica, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+padding: 6px 0px 6px 0px;
+margin: 0px 0px 5px 0px;
+float: left;
+}
+
+
+
+	
+.helpsubheader {
+background-color: #ddd;	
+width: 340px;
+height: 21px;
+color: #a46f3d;
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: bold;
+margin: 0px 0px 5px 0px;
+padding: 2px 0px 0px 5px;
+float: left;
+}
+
+* html .helpsubheader {
+background-color: #ddd;	
+width: 340px;
+height: 23px;
+color: #a46f3d;
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: bold;
+margin: 0px 0px 5px 0px;
+padding: 2px 0px 0px 5px;
+float: left;
+position: relative;
+top: 0px;
+left: -3px;
+}
+
+.helpmenushrink {
+background-color: #0dd;	
+width: 14px;
+height: 13px;
+float: right;
+background: url(http://depts.washington.edu/llc/Images/X.png) no-repeat;
+position: relative;
+top: 2px;
+left: 0px; 	
+}
+
+* html .helpmenushrink {
+background-color: #0dd;	
+width: 14px;
+height: 13px;
+float: right;
+background: url(http://depts.washington.edu/llc/Images/X.png) no-repeat;
+position: relative;
+top: 0px;
+left: 0px; 	
+}
+
+.helpoptions {
+background-color: #eee;	
+width: 325px;
+color: #a46f3d;
+margin: 0px 0px 0px 0px;
+padding: 2px 5px 4px 15px;
+Border-width: 0px 2px 2px 2px;
+border-color: #ddd;
+border-style: solid;
+font-weight: bold;
+position: relative;
+top: -5px;
+left: 12px;
+}
+
+
+* html .helpoptions {
+background-color: #eee;	
+width: 344px;
+color: #a46f3d;
+margin: 0px 0px 0px 0px;
+padding: 2px 5px 4px 15px;
+Border-width: 0px 2px 2px 2px;
+border-color: #ddd;
+border-style: solid;
+font-weight: bold;
+position: relative;
+top: -5px;
+left: 15px;
+}
+
+.helpleftround {
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+width: 18px;
+height: 30px;
+background:#39f url('http://depts.washington.edu/llc/Images/Left_Round_White.png') no-repeat;
+}
+
+* html .helpleftround {
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left:0px;
+width: 18px;
+height: 30px;
+background:#39f url('http://depts.washington.edu/llc/Images/Left_Round_White.png') no-repeat;
+}
+
+.helprightround {
+background-color: #39f;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+width: 18px;
+height: 30px;
+background:#39f url('http://depts.washington.edu/llc/Images/Right_Round_White.png') no-repeat;
+}
+
+* html .helprightround {
+background-color: #39f;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+width: 18px;
+height: 30px;
+background:#39f url('http://depts.washington.edu/llc/Images/Right_Round_White.png') no-repeat;
+}
+
+
+.helpinset {
+margin-left: 12px;
+}
+
+.helpleftroundsm {
+border: 0px solid #000;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+height: 23px;
+width: 14px;
+}
+
+* html .helpleftroundsm {
+border: 0px solid #000;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+height: 23px;
+width: 14px;
+}
+
+.helprightroundsm {
+border: 0px solid #000;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: 0px;
+height: 23px;
+width: 14px;
+}
+
+* html .helprightroundsm {
+border: 0px solid #000;
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+top: 0px;
+left: -6px;
+height: 23px;
+width: 14px;
+}
+	
+/*------ OLR Specific FONTS ------*/
+
+
+
+
+
+
+.bluesubheader {
+color: #2a6e8f;
+font-family: arial, helvetica, sans-serif;
+font-size: 15px;
+height: 16px;
+font-style: normal;
+margin: 0px;
+text-decoration: none;
+}
+
+.maintext {
+color: #fff;
+font-family: Times, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+margin: 5px 15px 5px 15px;
+text-decoration: none;
+text-align: left;
+}
+
+.olrsubtext {
+color: #111111;
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: normal;
+margin: 3px 12px 12px 24px;
+}
+
+
+
+.bold {
+font-weight: bold;
+font-style: normal;
+	}
+
+
+
+/*---------------------------------
+----------- END FONTS -------------
+---------------------------------*/
+
+
+
+
+div.aboutnamebox {
+color: #FFF;
+background-color: #2a6e8f;
+border: 1px;
+border-color: #888;
+border-style: solid;	
+height: 45px;
+width: 45px;	
+text-align: left;	
+margin-bottom: 3px;
+}
+
+* HTML div.aboutnamebox {
+color: #FFF;
+background-color: transparent;
+border: 1px;
+border-color: #888;
+border-style: solid;
+padding: 0px;
+margin: 0px;	
+height: 45px;
+width: 45px;	
+text-align: left;	
+margin-bottom: 3px;
+}
+
+
+div.aboutgrouptext {
+color: #296e8f;
+font-family: arial, helvetica, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+text-decoration: underline;
+height: 30px;
+min-width: 100px;	
+text-align: left;
+}
+
+div.aboutgrouptextright {
+color: #296e8f;
+font-family: arial, helvetica, sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: bold;
+text-decoration: underline;
+height: 30px;
+min-width: 100px;	
+text-align: center;
+}
+
+
+div.aboutname {
+padding: 5px 2px 0px 0px;	
+font-family: arial, helvetica, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: bold;
+}
+
+img.abouttn {
+float: left;
+height: 45px;	
+padding: 0px;	
+margin-right: 6px;
+border-width: 0px;
+border-color: #111;
+border-style: solid;	
+position: relative;
+width:45px;
+}
+
+* html img.abouttn {
+float: left;
+height: 45px	
+padding: 0px;	
+margin-right: 0px;
+border-width: 0px;
+border-color: #111;
+border-style: solid;	
+position: relative;
+width:45px;
+}
+
+
+
+#boxauthors {
+border-width: 1px;
+border-color: #296e8f;
+border-style: solid;	
+position: relative;
+top: 0px;
+left: 100px;
+width: 175px;
+float: left;	
+padding: 7px 0px 0px 7px; 
+text-align: left;
+background: transparent;
+}
+
+
+
+
+
+#boxphotographers {
+position: relative;
+top: 0px;
+left: -200px;
+width: 200px;
+float: right;	
+text-align: left;
+background: transparency;
+border-width: 1px;
+border-color: #296e8f;
+border-style: solid;	
+padding: 7px 0px 0px 7px; 
+text-align: left;
+background: transparent;
+
+}
+
+
+
+
+#boxsoftware {
+border-width: 1px;
+border-color: #296e8f;
+border-style: solid;	
+position: relative;
+top: 0px;
+left: 20px;
+width: 220px;
+float: left;	
+text-align: left;
+padding: 7px 0px 0px 7px; 
+background: transparent;
+}
+
+
+
+#boxmuseums {
+position: relative;
+top: -50px;
+left: -50px;
+width: 260px;
+float: right;	
+text-align: left;
+border-width: 1px;
+border-color: #296e8f;
+border-style: solid;	
+padding: 7px 0px 0px 7px; 
+background: transparent;
+}
+
+
+
+
+
+
+
+
+/*---------------------------------
+----------- BEGIN Popups ---------
+---------------------------------*/
+
+img.popupimage {
+border-width: 2px;
+border-color: #666;
+border-style: solid;
+margin: 0px 10px 0px 11px;		
+}
+
+
+
+
+div.instructionsbox {
+font-weight: bold;
+font-family: arial;
+font-size: 10px;
+line-height: 1.2em;	
+color: #fff;	
+padding: 0px 4px 4px 4px;
+
+
+  }
+  
+.instructionbody {
+font-weight: normal;
+font-family: arial;
+font-size: 12px;
+line-height: 1.2em;	
+color: #fff;	
+padding: 0px;
+
+  }
+
+
+  
+
+.box_content {
+    position: fixed;
+    top: 5%;
+    left: 28%;
+    right: 30%;
+    width: 40%;
+    padding: 0px 16px 16px 8px;
+    z-index: 1502;
+    overflow: auto;
+    border: 2px #fff solid;
+background: url('Images/Transparency_80.png') repeat;
+   min-height: 300px;
+}
+
+
+* html .box_content {
+    position: relative;
+    top: 5%;
+    left: 28%;
+    right: 30%;
+    width: 40%;
+    padding: 0px 16px 16px 16px;
+    z-index: 1;
+    overflow: auto;
+    border: 2px #fff solid;
+    background: #111;	
+	filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+  	opacity: 0.85;
+      min-height: 300px;
+}
+
+
+.popupheader {
+font-weight: normal;
+font-family: arial;
+font-size: 20px;
+line-height: 1.2em;	
+color: #296e8f;	
+padding: 0px;
+margin: 0px;
+  }
+
+  .popupsubheader {
+font-weight: bold;
+font-family: arial;
+font-size: 14px;
+line-height: 1.2em;	
+color: #296e8f;	
+padding: 0px;
+margin: 0px;
+  }
+
+.popuptext {
+text-align: left;
+font-weight: normal;
+font-family: arial;
+font-size: 12px;
+line-height: 1.3em;	
+margin: 4px 15px 4px 5px;
+}
+  
+.popuptextsmall {
+text-align: left;
+font-weight: normal;
+font-family: arial;
+font-size: 11px;
+line-height: 1.3em;	
+padding-right: 2px;
+margin: 5px 15px 2px 5px;
+}
+
+/*---------------------------------
+------ BEGIN MISC FORMATTING ------
+---------------------------------*/
+
+
+
+ul.noindent {
+  margin-left: 18px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: left;
+}
+
+li.lang {
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 150%;
+letter-spacing: 0px;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;	
+}
+
+
+li {
+font-family: arial, helvetica, sans-serif;
+font-size: 12px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height:150%;
+letter-spacing: 0px;
+word-spacing: normal;
+text-decoration: none;
+text-transform: none;
+text-align: left;
+text-indent: 0ex;	
+}
+
+ul.normal {
+  margin: 8px 0px 0px 0px;
+  text-align: left;
+  padding: 0px;
+}
+
+
+ol.noindent {
+  margin-left: 20px;
+  
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+
+
+
+
+
+table {
+	border-width: 2px 2px 2px 2px;
+	border-spacing: 0px;
+	border-style: solid solid solid solid;
+	border-color: rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200);
+	border-collapse: separate;
+	background-color: white;
+}
+table th {
+	border-width: 2px 2px 2px 2px;
+	padding: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+	color: #fff;
+	line-height: 1.5em;
+	border-color: rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200);
+	background-color: rgb(75, 75, 75);
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+table td {
+	border-width: 2px 2px 2px 2px;
+	padding: 6px;
+	text-align: center;
+	border-style: solid solid solid solid;
+	border-color: rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200) rgb(200, 200, 200);
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+
+}
+
+
+
+A:link, A:visited, A:active, A:hover {color: #5674a5; text-decoration:none; border: none;}
+
+
+
+
+
+
+a.white:link {color: #ffffff; font-weight: normal;  text-decoration:none; border: none;}
+a.white:active {color: #ffffff; font-weight: normal;  text-decoration:none; border: none;}
+a.white:visited {color: #ffffff; font-weight: normal;  text-decoration:none; border: none;;}
+a.white:hover {color: #acc8fe; font-weight: normal;  text-decoration:none; border: none;}
+
+a.lightblue:link {color: #acc8fe; font-weight: normal;  text-decoration:none; border: none;}
+a.lightblue:active {color: #acc8fe; font-weight: normal;  text-decoration:none; border: none;}
+a.lightblue:visited {color: #acc8fe; font-weight: normal;  text-decoration:none; border: none;}
+a.lightblue:hover {color: #c9e4ff; font-weight: normal;  text-decoration:none; border: none;}
+
+
+
+
+/*---------------------------------
+------- END MISC FORMATTING -------
+---------------------------------*/
+
+
